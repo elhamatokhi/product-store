@@ -1,8 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectCartCount } from "../../features/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCartCount, toggleCart } from "../../features/cart/cartSlice";
 
 function Navbar() {
+  const dispatch = useDispatch();
   const cartCount = useSelector(selectCartCount);
 
   return (
@@ -12,7 +13,13 @@ function Navbar() {
       </Link>
       <nav>
         <NavLink to="/">Products</NavLink>
-        <span className="cart-pill">Cart {cartCount}</span>
+        <button
+          type="button"
+          className="cart-pill"
+          onClick={() => dispatch(toggleCart())}
+        >
+          Cart {cartCount}
+        </button>
       </nav>
     </header>
   );
