@@ -1,15 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useEffect, useMemo, useReducer } from "react";
+import i18n from "../locales/i18n";
+import { getLanguageMeta, supportedLanguages } from "../locales/languages";
 
 /* eslint-disable react-refresh/only-export-components */
 
-const SettingsContext = createContext();
-
-export const languages = [
-  { code: "en", label: "English", dir: "ltr" },
-  { code: "fa", label: "Persian", dir: "rtl" },
-  { code: "ps", label: "Pashto", dir: "rtl" },
-  { code: "de", label: "Deutsch", dir: "ltr" },
-];
+const SettingsContext = createContext(null);
 
 const initialState = {
   theme: "light",
@@ -41,24 +36,47 @@ function settingsReducer(state, action) {
   }
 }
 
+export { supportedLanguages };
+
 export function SettingsProvider({ children }) {
   const [state, dispatch] = useReducer(settingsReducer, initialState);
-  const activeLanguage =
-    languages.find((language) => language.code === state.language) ?? languages[0];
+  const activeLanguage = getLanguageMeta(state.language);
 
   useEffect(() => {
-    document.documentElement.dataset.theme = state.theme;
-    document.documentElement.lang = activeLanguage.code;
-    document.documentElement.dir = activeLanguage.dir;
+    const root = document.documentElement;
+
+    root.dataset.theme = state.theme;
+    root.classList.toggle("dark", state.theme === "dark");
+    root.lang = activeLanguage.code;
+    root.dir = activeLanguage.dir;
+
+    // Keep Context API preferences as the source of truth while i18next handles translation lookup.
+    i18n.changeLanguage(activeLanguage.code);
   }, [activeLanguage, state.theme]);
 
+  const value = useMemo(
+    () => ({
+      state,
+      dispatch,
+      activeLanguage,
+      setTheme: (theme) => dispatch({ type: "SET_THEME", payload: theme }),
+      setLanguage: (language) =>
+        dispatch({ type: "SET_LANGUAGE", payload: language }),
+    }),
+    [activeLanguage, state],
+  );
+
   return (
-    <SettingsContext.Provider value={{ state, dispatch, activeLanguage }}>
-      {children}
-    </SettingsContext.Provider>
+    <SettingsContext.Provider value={value}>{children}</SettingsContext.Provider>
   );
 }
 
 export function useSettings() {
-  return useContext(SettingsContext);
+  const context = useContext(SettingsContext);
+
+  if (!context) {
+    throw new Error("useSettings must be used inside SettingsProvider");
+  }
+
+  return context;
 }

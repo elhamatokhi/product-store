@@ -1,0 +1,88 @@
+
+{
+  "app": {
+    "brand": "فروشگاه محصولات",
+    "footer": "تمامی حقوق محفوظ است."
+  },
+  "navbar": {
+    "products": "محصولات",
+    "settings": "تنظیمات",
+    "cart": "سبد خرید",
+    "openMenu": "باز کردن منوی ناوبری",
+    "closeMenu": "بستن منوی ناوبری",
+    "menu": "ناوبری"
+  },
+    "languages": {
+    "english": "انگلیسی",
+    "persian": "فارسی",
+    "pashto": "پشتو",
+    "german": "آلمانی"
+    },
+  "settings": {
+    "eyebrow": "ترجیحات",
+    "title": "تنظیمات",
+    "intro": "تنظیمات مربوط به قالب و زبان را انتخاب کنید.",
+    "theme": "قالب",
+    "language": "زبان",
+    "appearance": "ظاهر",
+    "localization": "بومی‌سازی",
+    "themeHint": "رنگ‌های رابط کاربری را برای فضای کاری خود تنظیم کنید.",
+    "languageHint": "تغییر زبان جهت صفحه را نیز به‌صورت خودکار به‌روزرسانی می‌کند.",
+    "light": "روشن",
+    "dark": "تیره"
+  },
+  "buttons": {
+    "addToCart": "افزودن به سبد خرید",
+    "clearCart": "پاک کردن سبد خرید",
+    "close": "بستن",
+    "next": "بعدی",
+    "previous": "قبلی",
+    "remove": "حذف",
+    "returnHome": "بازگشت به صفحه اصلی",
+    "submitReview": "ارسال نظر",
+    "submitting": "در حال ارسال..."
+  },
+  "products": {
+    "heroEyebrow": "فروشگاه React Query",
+    "heroTitle": "محصولات دریافت، ذخیره و صفحه‌بندی شده‌اند و آماده بررسی هستند.",
+    "heroText": "داده‌های محصولات از DummyJSON با کلیدهای پایدار، صفحات کش‌شده، جزئیات محصولات، اسکرول بی‌نهایت و ثبت نظر آزمایشی دریافت می‌شوند.",
+    "pagination": "صفحه‌بندی",
+    "listTitle": "لیست محصولات از API",
+    "cachedForFiveMinutes": "برای ۵ دقیقه کش شده است",
+    "refreshingCachedData": "در حال به‌روزرسانی داده‌های کش‌شده...",
+    "loading": "در حال بارگذاری محصولات...",
+    "loadingMore": "در حال بارگذاری محصولات بیشتر...",
+    "loadingNextPage": "در حال بارگذاری صفحه بعد...",
+    "noProducts": "محصولی یافت نشد.",
+    "page": "صفحه",
+    "showingCachedPage": "نمایش صفحه کش‌شده",
+    "infiniteScroll": "اسکرول بی‌نهایت",
+    "keepBrowsing": "به مرور ادامه دهید",
+    "cachedInfiniteQuery": "کش‌شده با کلید query: products/list/infinite",
+    "scrollForMore": "برای مشاهده بیشتر اسکرول کنید",
+    "allLoaded": "همه محصولات بارگذاری شدند",
+    "stars": "ستاره",
+    "inStock": "موجود در انبار"
+  },
+  "cart": {
+    "shoppingCart": "سبد خرید",
+    "items": "آیتم",
+    "empty": "سبد خرید شما خالی است.",
+    "totalPrice": "قیمت کل"
+  },
+  "details": {
+    "loading": "در حال بارگذاری جزئیات محصول...",
+    "backToProducts": "بازگشت به محصولات"
+  },
+  "reviews": {
+    "mutation": "تغییر",
+    "title": "ارسال نظر آزمایشی",
+    "yourName": "نام شما",
+    "writeReview": "یک نظر کوتاه بنویسید",
+    "success": "نظر به جزئیات کش‌شده محصول اضافه شد."
+  },
+  "emptyStates": {
+    "pageNotFound": "صفحه پیدا نشد",
+    "notFoundText": "قفسه محصولی که به دنبال آن بودید اینجا نیست."
+  }
+}

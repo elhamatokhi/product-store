@@ -1,0 +1,87 @@
+{
+  "app": {
+    "brand": "Product Store",
+    "footer": "All rights reserved."
+  },
+  "navbar": {
+    "products": "Products",
+    "settings": "Settings",
+    "cart": "Cart",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "menu": "Navigation"
+  },
+  "languages": {
+    "english": "English",
+    "persian": "Persian",
+    "pashto": "Pashto",
+    "german": "German"
+  },
+  "settings": {
+    "eyebrow": "Preferences",
+    "title": "Settings",
+    "intro": "Choose your theme and language preferences.",
+    "theme": "Theme",
+    "language": "Language",
+    "appearance": "Appearance",
+    "localization": "Localization",
+    "themeHint": "Adjust the interface colors for your workspace.",
+    "languageHint": "Language changes also update page direction automatically.",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "buttons": {
+    "addToCart": "Add to cart",
+    "clearCart": "Clear cart",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "remove": "Remove",
+    "returnHome": "Return home",
+    "submitReview": "Submit review",
+    "submitting": "Submitting..."
+  },
+  "products": {
+    "heroEyebrow": "React Query store",
+    "heroTitle": "Products fetched, cached, paged, and ready to inspect.",
+    "heroText": "Product data comes from DummyJSON with stable query keys, cached pages, detail queries, infinite scroll, and a mock review mutation.",
+    "pagination": "Pagination",
+    "listTitle": "Product list from API",
+    "cachedForFiveMinutes": "Cached for 5 minutes",
+    "refreshingCachedData": "Refreshing cached data...",
+    "loading": "Loading products...",
+    "loadingMore": "Loading more products...",
+    "loadingNextPage": "Loading next page...",
+    "noProducts": "No products found.",
+    "page": "Page",
+    "showingCachedPage": "showing cached page",
+    "infiniteScroll": "Infinite scroll",
+    "keepBrowsing": "Keep browsing",
+    "cachedInfiniteQuery": "Cached with query key: products/list/infinite",
+    "scrollForMore": "Scroll for more",
+    "allLoaded": "All products loaded",
+    "stars": "stars",
+    "inStock": "in stock"
+  },
+  "cart": {
+    "shoppingCart": "Shopping cart",
+    "items": "items",
+    "empty": "Your cart is empty.",
+    "totalPrice": "Total price"
+  },
+  "details": {
+    "loading": "Loading product details...",
+    "backToProducts": "Back to products"
+  },
+  "reviews": {
+    "mutation": "Mutation",
+    "title": "Submit a mock review",
+    "yourName": "Your name",
+    "writeReview": "Write a short review",
+    "success": "Review added to the cached product detail."
+  },
+  "emptyStates": {
+    "pageNotFound": "Page not found",
+    "notFoundText": "The product shelf you were looking for is not here."
+  }
+}

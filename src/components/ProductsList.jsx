@@ -1,10 +1,13 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import ProductCard from "./ProductCard";
 import { useInfiniteProducts } from "../features/products/useProducts";
 
 function ProductsList({ products = [] }) {
+  const { t } = useTranslation();
+
   if (!products.length) {
-    return <p className="empty-state">No products found.</p>;
+    return <p className="empty-state">{t("products.noProducts")}</p>;
   }
 
   return (
@@ -17,6 +20,7 @@ function ProductsList({ products = [] }) {
 }
 
 export function InfiniteProductsList() {
+  const { t } = useTranslation();
   const loadMoreRef = useRef(null);
   const {
     data,
@@ -46,7 +50,7 @@ export function InfiniteProductsList() {
   }, [fetchNextPage, hasNextPage]);
 
   if (isLoading) {
-    return <p className="status">Loading more products...</p>;
+    return <p className="status">{t("products.loadingMore")}</p>;
   }
 
   if (isError) {
@@ -59,20 +63,20 @@ export function InfiniteProductsList() {
     <section className="section-block">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">Infinite scroll</span>
-          <h2>Keep browsing</h2>
+          <span className="eyebrow">{t("products.infiniteScroll")}</span>
+          <h2>{t("products.keepBrowsing")}</h2>
         </div>
-        <span className="cache-note">Cached with query key: products/list/infinite</span>
+        <span className="cache-note">{t("products.cachedInfiniteQuery")}</span>
       </div>
 
       <ProductsList products={products} />
 
       <div ref={loadMoreRef} className="load-more">
         {isFetchingNextPage
-          ? "Loading next page..."
+          ? t("products.loadingNextPage")
           : hasNextPage
-            ? "Scroll for more"
-            : "All products loaded"}
+            ? t("products.scrollForMore")
+            : t("products.allLoaded")}
       </div>
     </section>
   );

@@ -1,16 +1,133 @@
-# React + Vite
+# Product Store App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern ecommerce product store built with React, Redux Toolkit, React Query, Context API, and Tailwind CSS.
 
-Currently, two official plugins are available:
+The application allows users to browse products, view product details, manage a shopping cart, switch themes/languages, and experience a responsive modern UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# Live Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Product listing from external API
+* Product details page
+* Shopping cart with Redux Toolkit
+* Dark / Light mode
+* Language switching (i18n)
+* Grid / List view
+* Product search
+* Category filtering
+* Price sorting
+* Infinite scrolling
+* Pagination
+* Responsive mobile navigation
+* Toast notifications
+* Skeleton loading states
+* Cart persistence with localStorage
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Screenshots
+
+## Home Page
+
+<img width="100%" alt="Home Page" src="./screenshots/home.png" />
+
+---
+
+## Product Details
+
+<img width="100%" alt="Product Details" src="./screenshots/product-details.png" />
+
+---
+
+## Cart Drawer
+
+<img width="100%" alt="Cart Drawer" src="./screenshots/cart.png" />
+
+---
+
+## Mobile View
+
+<img width="40%" alt="Mobile View" src="./screenshots/mobile.png" />
+
+---
+
+# Demo Video
+
+```md
+[Watch Demo Video](./demo/demo-video.mp4)
+```
+---
+
+# Tools & Libraries Used
+
+* React
+* Redux Toolkit
+* React Redux
+* React Query / TanStack Query
+* React Router DOM
+* Tailwind CSS
+* React i18next
+* React Hot Toast
+* Vite
+
+---
+
+# Project Structure
+
+```bash
+src/
+├── app/
+├── components/
+├── context/
+├── features/
+├── hooks/
+├── locales/
+├── pages/
+├── routes/
+├── styles/
+└── utils/
+```
+
+---
+
+# Getting Started
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/elhamatokhi/product-store.git
+```
+
+---
+
+## 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3. Start development server
+
+```bash
+npm run dev
+```
+---
+
+# API Used
+
+* DummyJSON Products API
+
+```txt
+https://dummyjson.com/products
+```
+
+---
+
+## 👤 Author
+
+**Elhama Tokhi**
+
+* GitHub: [https://github.com/elhamatokhi](https://github.com/elhamatokhi)

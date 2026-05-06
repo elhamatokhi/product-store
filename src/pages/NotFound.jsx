@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function NotFound() {
+  const { t } = useTranslation();
+
   return (
     <section className="not-found">
-      <h1>Page not found</h1>
-      <p>The product shelf you were looking for is not here.</p>
-      <Link to="/">Return home</Link>
+      <h1>{t("emptyStates.pageNotFound")}</h1>
+      <p>{t("emptyStates.notFoundText")}</p>
+      <Link to="/">{t("buttons.returnHome")}</Link>
     </section>
   );
 }

@@ -1,0 +1,87 @@
+{
+  "app": {
+    "brand": "Produktshop",
+    "footer": "Alle Rechte vorbehalten."
+  },
+  "navbar": {
+    "products": "Produkte",
+    "settings": "Einstellungen",
+    "cart": "Warenkorb",
+    "openMenu": "Navigationsmenü öffnen",
+    "closeMenu": "Navigationsmenü schließen",
+    "menu": "Navigation"
+  },
+  "languages": {
+    "english": "Englisch",
+    "persian": "Persisch",
+    "pashto": "Paschto",
+    "german": "Deutsch"
+  },
+  "settings": {
+    "eyebrow": "Präferenzen",
+    "title": "Einstellungen",
+    "intro": "Wählen Sie Ihre Design- und Spracheinstellungen.",
+    "theme": "Design",
+    "language": "Sprache",
+    "appearance": "Darstellung",
+    "localization": "Lokalisierung",
+    "themeHint": "Passen Sie die Farben der Benutzeroberfläche an.",
+    "languageHint": "Sprachänderungen aktualisieren auch automatisch die Seitenrichtung.",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
+  "buttons": {
+    "addToCart": "Zum Warenkorb hinzufügen",
+    "clearCart": "Warenkorb leeren",
+    "close": "Schließen",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "remove": "Entfernen",
+    "returnHome": "Zur Startseite",
+    "submitReview": "Bewertung absenden",
+    "submitting": "Wird gesendet..."
+  },
+  "products": {
+    "heroEyebrow": "React Query Shop",
+    "heroTitle": "Produkte geladen, zwischengespeichert und bereit zur Ansicht.",
+    "heroText": "Produktdaten stammen von DummyJSON mit stabilen Query Keys, gecachten Seiten, Detailabfragen, Infinite Scroll und einer simulierten Bewertungs-Mutation.",
+    "pagination": "Seitennummerierung",
+    "listTitle": "Produktliste aus der API",
+    "cachedForFiveMinutes": "Für 5 Minuten zwischengespeichert",
+    "refreshingCachedData": "Zwischengespeicherte Daten werden aktualisiert...",
+    "loading": "Produkte werden geladen...",
+    "loadingMore": "Weitere Produkte werden geladen...",
+    "loadingNextPage": "Nächste Seite wird geladen...",
+    "noProducts": "Keine Produkte gefunden.",
+    "page": "Seite",
+    "showingCachedPage": "Zwischengespeicherte Seite wird angezeigt",
+    "infiniteScroll": "Infinite Scroll",
+    "keepBrowsing": "Weiter stöbern",
+    "cachedInfiniteQuery": "Mit Query Key zwischengespeichert: products/list/infinite",
+    "scrollForMore": "Für mehr scrollen",
+    "allLoaded": "Alle Produkte geladen",
+    "stars": "Sterne",
+    "inStock": "auf Lager"
+  },
+  "cart": {
+    "shoppingCart": "Warenkorb",
+    "items": "Artikel",
+    "empty": "Ihr Warenkorb ist leer.",
+    "totalPrice": "Gesamtpreis"
+  },
+  "details": {
+    "loading": "Produktdetails werden geladen...",
+    "backToProducts": "Zurück zu den Produkten"
+  },
+  "reviews": {
+    "mutation": "Mutation",
+    "title": "Eine Beispielbewertung absenden",
+    "yourName": "Ihr Name",
+    "writeReview": "Schreiben Sie eine kurze Bewertung",
+    "success": "Bewertung zum gecachten Produktdetail hinzugefügt."
+  },
+  "emptyStates": {
+    "pageNotFound": "Seite nicht gefunden",
+    "notFoundText": "Das gesuchte Produktregal ist nicht vorhanden."
+  }
+}

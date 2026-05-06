@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
+import { useLocalizedProduct } from "../features/products/productLocalization";
 import { useProduct, useSubmitReview } from "../features/products/useProducts";
 
 function ProductDetails() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const dispatch = useDispatch();
   const { data: product, isLoading, isError, error } = useProduct(id);
+  const content = useLocalizedProduct(product);
   const reviewMutation = useSubmitReview();
   const [review, setReview] = useState({
     reviewerName: "",
@@ -35,7 +39,7 @@ function ProductDetails() {
   }
 
   if (isLoading) {
-    return <p className="status">Loading product details...</p>;
+    return <p className="status">{t("details.loading")}</p>;
   }
 
   if (isError) {
@@ -45,35 +49,39 @@ function ProductDetails() {
   return (
     <article className="details-page">
       <Link className="back-link" to="/">
-        Back to products
+        {t("details.backToProducts")}
       </Link>
 
       <div className="details-layout">
         <div className="details-media">
-          <img src={product.image} alt={product.title} />
+          <img src={product.image} alt={content.title} />
         </div>
 
         <div className="details-copy">
           <span className="eyebrow">{product.brand ?? product.category}</span>
-          <h1>{product.title}</h1>
-          <p>{product.description}</p>
+          <h1>{content.title}</h1>
+          <p>{content.description}</p>
 
           <div className="details-stats">
             <span>${product.price.toFixed(2)}</span>
-            <span>{product.rating.toFixed(1)} stars</span>
-            <span>{product.stock} in stock</span>
+            <span>
+              {product.rating.toFixed(1)} {t("products.stars")}
+            </span>
+            <span>
+              {product.stock} {t("products.inStock")}
+            </span>
           </div>
 
           <button type="button" onClick={() => dispatch(addToCart(product))}>
-            Add to cart
+            {t("buttons.addToCart")}
           </button>
         </div>
       </div>
 
       <section className="review-panel">
         <div>
-          <span className="eyebrow">Mutation</span>
-          <h2>Submit a mock review</h2>
+          <span className="eyebrow">{t("reviews.mutation")}</span>
+          <h2>{t("reviews.title")}</h2>
         </div>
 
         <form onSubmit={handleSubmit} className="review-form">
@@ -86,7 +94,7 @@ function ProductDetails() {
                 reviewerName: event.target.value,
               }))
             }
-            placeholder="Your name"
+            placeholder={t("reviews.yourName")}
           />
           <select
             value={review.rating}
@@ -94,25 +102,27 @@ function ProductDetails() {
               setReview((current) => ({ ...current, rating: event.target.value }))
             }
           >
-            <option value="5">5 stars</option>
-            <option value="4">4 stars</option>
-            <option value="3">3 stars</option>
-            <option value="2">2 stars</option>
-            <option value="1">1 star</option>
+            <option value="5">5 {t("products.stars")}</option>
+            <option value="4">4 {t("products.stars")}</option>
+            <option value="3">3 {t("products.stars")}</option>
+            <option value="2">2 {t("products.stars")}</option>
+            <option value="1">1 {t("products.stars")}</option>
           </select>
           <textarea
             value={review.comment}
             onChange={(event) =>
               setReview((current) => ({ ...current, comment: event.target.value }))
             }
-            placeholder="Write a short review"
+            placeholder={t("reviews.writeReview")}
             rows="4"
           />
           <button type="submit" disabled={reviewMutation.isPending}>
-            {reviewMutation.isPending ? "Submitting..." : "Submit review"}
+            {reviewMutation.isPending
+              ? t("buttons.submitting")
+              : t("buttons.submitReview")}
           </button>
           {reviewMutation.isSuccess && (
-            <p className="success-note">Review added to the cached product detail.</p>
+            <p className="success-note">{t("reviews.success")}</p>
           )}
         </form>
 
@@ -120,7 +130,9 @@ function ProductDetails() {
           {(product.reviews ?? []).map((item) => (
             <div className="review" key={item.id ?? item.comment}>
               <strong>{item.reviewerName}</strong>
-              <span>{item.rating} stars</span>
+              <span>
+                {item.rating} {t("products.stars")}
+              </span>
               <p>{item.comment}</p>
             </div>
           ))}

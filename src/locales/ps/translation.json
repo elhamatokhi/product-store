@@ -1,0 +1,87 @@
+{
+  "app": {
+    "brand": "د محصولاتو پلورنځی",
+    "footer": "ټول حقونه خوندي دي."
+  },
+  "navbar": {
+    "products": "محصولات",
+    "settings": "تنظیمات",
+    "cart": "د پیرود ټوکرۍ",
+    "openMenu": "د نیویګیشن مینو پرانستل",
+    "closeMenu": "د نیویګیشن مینو تړل",
+    "menu": "نیویګیشن"
+  },
+  "languages": {
+    "english": "انګلیسي",
+    "persian": "فارسي",
+    "pashto": "پښتو",
+    "german": "الماني"
+  },
+  "settings": {
+    "eyebrow": "غوره توبونه",
+    "title": "تنظیمات",
+    "intro": "د بڼې او ژبې غوره توبونه وټاکئ.",
+    "theme": "بڼه",
+    "language": "ژبه",
+    "appearance": "ښکارېدنه",
+    "localization": "ځایي کول",
+    "themeHint": "د خپل کاري چاپېریال رنګونه تنظیم کړئ.",
+    "languageHint": "د ژبې بدلون د پاڼې لوری هم په اوتومات ډول بدلوي.",
+    "light": "روښانه",
+    "dark": "تیاره"
+  },
+  "buttons": {
+    "addToCart": "ټوکرۍ ته اضافه کړئ",
+    "clearCart": "ټوکرۍ پاکه کړئ",
+    "close": "تړل",
+    "next": "بل",
+    "previous": "مخکینی",
+    "remove": "لرې کول",
+    "returnHome": "کور ته ستنېدل",
+    "submitReview": "بیاکتنه وسپارئ",
+    "submitting": "سپارل کېږي..."
+  },
+  "products": {
+    "heroEyebrow": "React Query پلورنځی",
+    "heroTitle": "محصولات ترلاسه شوي، ذخیره شوي او چمتو دي.",
+    "heroText": "د محصولاتو معلومات د DummyJSON څخه د ثابت query keys، cached pages، infinite scroll او mock review mutation سره ترلاسه کېږي.",
+    "pagination": "صفحه بندي",
+    "listTitle": "د API محصولاتو لیست",
+    "cachedForFiveMinutes": "د ۵ دقیقو لپاره ذخیره شوی",
+    "refreshingCachedData": "ذخیره شوي معلومات تازه کېږي...",
+    "loading": "محصولات بارېږي...",
+    "loadingMore": "نور محصولات بارېږي...",
+    "loadingNextPage": "راتلونکې پاڼه بارېږي...",
+    "noProducts": "هیڅ محصول ونه موندل شو.",
+    "page": "پاڼه",
+    "showingCachedPage": "ذخیره شوې پاڼه ښودل کېږي",
+    "infiniteScroll": "بې پای سکرول",
+    "keepBrowsing": "لټون ته دوام ورکړئ",
+    "cachedInfiniteQuery": "د query key سره ذخیره شوی: products/list/infinite",
+    "scrollForMore": "د نورو لپاره سکرول وکړئ",
+    "allLoaded": "ټول محصولات بار شول",
+    "stars": "ستوري",
+    "inStock": "په ګدام کې موجود"
+  },
+  "cart": {
+    "shoppingCart": "د پیرود ټوکرۍ",
+    "items": "توکي",
+    "empty": "ستاسو ټوکرۍ خالي ده.",
+    "totalPrice": "ټول قیمت"
+  },
+  "details": {
+    "loading": "د محصول جزئیات بارېږي...",
+    "backToProducts": "محصولاتو ته بېرته"
+  },
+  "reviews": {
+    "mutation": "بدلون",
+    "title": "یوه ازمایښتي بیاکتنه وسپارئ",
+    "yourName": "ستاسو نوم",
+    "writeReview": "لنډه بیاکتنه ولیکئ",
+    "success": "بیاکتنه د محصول ذخیره شوي جزئیاتو ته اضافه شوه."
+  },
+  "emptyStates": {
+    "pageNotFound": "پاڼه ونه موندل شوه",
+    "notFoundText": "هغه د محصول المارۍ چې تاسو یې لټوئ دلته نشته."
+  }
+}

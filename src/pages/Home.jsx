@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ProductsList, { InfiniteProductsList } from "../components/ProductsList";
 import { useProducts } from "../features/products/useProducts";
 
 function Home() {
+  const { t } = useTranslation();
   const [page, setPage] = useState(1);
   const pageSize = 8;
   const { data, isLoading, isError, error, isFetching, isPlaceholderData } =
@@ -13,26 +15,25 @@ function Home() {
   return (
     <>
       <section className="page-hero">
-        <span className="eyebrow">React Query store</span>
-        <h1>Products fetched, cached, paged, and ready to inspect.</h1>
-        <p>
-          Product data comes from DummyJSON with stable query keys, cached pages,
-          detail queries, infinite scroll, and a mock review mutation.
-        </p>
+        <span className="eyebrow">{t("products.heroEyebrow")}</span>
+        <h1>{t("products.heroTitle")}</h1>
+        <p>{t("products.heroText")}</p>
       </section>
 
       <section className="section-block">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">Pagination</span>
-            <h2>Product list from API</h2>
+            <span className="eyebrow">{t("products.pagination")}</span>
+            <h2>{t("products.listTitle")}</h2>
           </div>
           <span className="cache-note">
-            {isFetching && !isLoading ? "Refreshing cached data..." : "Cached for 5 minutes"}
+            {isFetching && !isLoading
+              ? t("products.refreshingCachedData")
+              : t("products.cachedForFiveMinutes")}
           </span>
         </div>
 
-        {isLoading && <p className="status">Loading products...</p>}
+        {isLoading && <p className="status">{t("products.loading")}</p>}
         {isError && <p className="status status--error">{error.message}</p>}
 
         {data && (
@@ -45,11 +46,13 @@ function Home() {
                 onClick={() => setPage((current) => Math.max(current - 1, 1))}
                 disabled={page === 1}
               >
-                Previous
+                {t("buttons.previous")}
               </button>
               <span>
-                Page {page} of {totalPages}
-                {isPlaceholderData ? " - showing cached page" : ""}
+                {t("products.page")} {page} / {totalPages}
+                {isPlaceholderData
+                  ? ` - ${t("products.showingCachedPage")}`
+                  : ""}
               </span>
               <button
                 type="button"
@@ -58,7 +61,7 @@ function Home() {
                 }
                 disabled={page === totalPages}
               >
-                Next
+                {t("buttons.next")}
               </button>
             </div>
           </>

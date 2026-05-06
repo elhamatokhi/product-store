@@ -1,5 +1,6 @@
 
 import './index.css'
+import './locales/i18n.js'
 import App from './App.jsx'
 import ReactDOM from 'react-dom/client'
 import { SettingsProvider } from './context/SettingsContext.jsx'
