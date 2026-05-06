@@ -7,22 +7,31 @@ const SettingsContext = createContext()
 const initialState = {
     theme: "light",
     view: 'grid',
-    category: 'all'
+    category: 'all',
+    language: "en", 
 }
 
-// reducer function
+// reducer function - handles all state updates
 function settingsReducer(state, action){
     switch(action.type){
+        // Toggle dark/light mode
         case 'TOGGLE_THEME':
             return{
                 ...state,
                 theme: state.theme === 'light' ? 'dark' : 'light'
             }
+         // Change grid/list view
         case 'SET_VIEW':
             return {...state, view: action.payload}
+        // Change selected category
         case 'SET_CATEGORY':
             return {...state, category: action.payload}
-        
+        // Set language
+        case "SET_LANGUAGE":
+        return {
+            ...state,
+            language: action.payload,
+        };
         default:
             return state
     }
