@@ -4,6 +4,10 @@ A modern ecommerce product store built with React, Redux Toolkit, React Query, C
 
 The application allows users to browse products, view product details, manage a shopping cart, switch themes/languages, and experience a responsive modern UI.
 
+# Live Demo
+
+[View Live App](https://product-store-7r29.onrender.com)
+
 # Features
 
 * Product listing from external API
@@ -53,14 +57,6 @@ The application allows users to browse products, view product details, manage a 
 ## Mobile View
 
 <img width="40%" alt="Mobile View" src="./src/assets/images/mobile.png" />
-
----
-
-# Demo Video
-
-```md
-
-```
 
 # Tools & Libraries Used
 
