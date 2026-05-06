@@ -85,13 +85,12 @@ main {
   flex: 1;
   margin: 0 auto;
   max-width: 1180px;
-  padding: 2rem clamp(1rem, 4vw, 3rem) 4rem;
+  padding: 0.5rem clamp(1rem, 4vw, 3rem) 2rem;
   width: 100%;
 }
 
 .page-hero {
   max-width: 760px;
-  padding: 2rem 0 3rem;
 }
 
 .settings-panel {

@@ -31,7 +31,6 @@ function Navbar() {
   const cartDispatch = useDispatch();
   const cartCount = useSelector(selectCartCount);
   const navItems = [
-    { to: "/", label: t("navbar.products") },
     { to: "/settings", label: t("navbar.settings") },
   ];
 

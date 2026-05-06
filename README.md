@@ -4,60 +4,63 @@ A modern ecommerce product store built with React, Redux Toolkit, React Query, C
 
 The application allows users to browse products, view product details, manage a shopping cart, switch themes/languages, and experience a responsive modern UI.
 
----
-
-# Live Features
+# Features
 
 * Product listing from external API
 * Product details page
 * Shopping cart with Redux Toolkit
-* Dark / Light mode
-* Language switching (i18n)
-* Grid / List view
-* Product search
-* Category filtering
-* Price sorting
-* Infinite scrolling
+* Add/remove cart items
+* Increase/decrease product quantity
+* Clear cart functionality
+* Cart drawer UI
+* Global app settings with Context API + useReducer
+* Dark / Light theme switching
+* Multi-language support (i18n)
+* RTL / LTR layout support
+* Responsive navigation bar
+* Product localization support
+* React Query data fetching
+* Cached API requests
 * Pagination
-* Responsive mobile navigation
-* Toast notifications
-* Skeleton loading states
-* Cart persistence with localStorage
-
----
+* Infinite scrolling
+* Mock review mutation
+* Responsive UI with Tailwind CSS
+* Accessible UI controls
+* Reusable preference controls
+* Error handling
+* Loading states
 
 # Screenshots
 
 ## Home Page
 
-<img width="100%" alt="Home Page" src="./screenshots/home.png" />
+<img width="100%" alt="Home Page" src="./src/assets/images/home.png" />
 
 ---
 
 ## Product Details
 
-<img width="100%" alt="Product Details" src="./screenshots/product-details.png" />
+<img width="100%" alt="Product Details" src="./src/assets/images/product-details.png" />
 
 ---
 
 ## Cart Drawer
 
-<img width="100%" alt="Cart Drawer" src="./screenshots/cart.png" />
+<img width="100%" alt="Cart Drawer" src="./src/assets/images/cart.png" />
 
 ---
 
 ## Mobile View
 
-<img width="40%" alt="Mobile View" src="./screenshots/mobile.png" />
+<img width="40%" alt="Mobile View" src="./src/assets/images/mobile.png" />
 
 ---
 
 # Demo Video
 
 ```md
-[Watch Demo Video](./demo/demo-video.mp4)
+
 ```
----
 
 # Tools & Libraries Used
 
@@ -71,22 +74,61 @@ The application allows users to browse products, view product details, manage a 
 * React Hot Toast
 * Vite
 
----
-
 # Project Structure
 
 ```bash
 src/
-├── app/
+├── assets/images
 ├── components/
+│
+│   ├── cart/
+│   │   └── CartDrawer.jsx
+│   │
+│   ├── layout/
+│   │   ├── Footer.jsx
+│   │   ├── Layout.jsx
+│   │   └── Navbar.jsx
+│   │
+│   ├── settings/
+│   │   ├── PreferenceControls.jsx
+│   │   └── SettingsPanel.jsx
+│   │
+│   ├── ProductCard.jsx
+│   └── ProductsList.jsx
+│
 ├── context/
+│   └── SettingsContext.jsx
+│
 ├── features/
-├── hooks/
+│   └── cart/
+│       └── cartSlice.js
+│   └── products/
+│       └── productLocalization.js
+│       └── productsApi.js
+│       └── useProducts.js
 ├── locales/
+│   ├── de/
+│   ├── en/
+│   ├── fa/
+│   ├── ps/
+│   ├── products/
+│     └── de.json
+│     └── en.json
+│     └── fa.json
+│     └── ps.json
+│   ├── i18n.js
+│   └── languages.js
+│
 ├── pages/
-├── routes/
-├── styles/
-└── utils/
+│   ├── Home.jsx
+│   ├── NotFound.jsx
+│   ├── ProductDetails.jsx
+│   └── Settings.jsx
+│
+├── App.css
+├── App.jsx
+├── index.css
+└── main.jsx
 ```
 
 ---
